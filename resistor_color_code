@@ -26,6 +26,8 @@ digit = {
     "gold": None,
     "silver": None,
     "(none)": None,
+    "none": None,
+    "blank": None,
 }
 
 multiplier = {
@@ -42,6 +44,8 @@ multiplier = {
     "gold": 10**-1,
     "silver": 10**-2,
     "(none)": None,
+    "none": None,
+    "blank": None,
 }
 
 #
@@ -64,6 +68,8 @@ tolerance = {
     "gold": 5,
     "silver": 10,
     "(none)": 20,
+    "none": 20,
+    "blank": 20,
 }
 
 

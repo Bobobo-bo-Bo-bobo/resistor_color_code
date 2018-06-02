@@ -80,7 +80,7 @@ This program comes with ABSOLUTELY NO WARRANTY.
 This program is distributed under the Terms of the GNU General
 Public License Version 3. (http://www.gnu.org/copyleft/gpl.html)
 
-Usage: resistor_color_code [-h|--help] <comma_separated_list_of_color_bands>
+Usage: resistor_color_code [-h|--help] <comma_separated_list_of_color_bands> [<comma_separated_list_of_color_bands> ...]
 
     -h      This text
     --help
@@ -216,8 +216,13 @@ if __name__ == "__main__":
             usage()
             sys.exit(1)
 
+    if len(trailing) == 0:
+        sys.stderr.write("Error: Not enough arguments\n\n")
+        usage()
+        sys.exit(1)
+
     for bands in trailing:
-        v,t = get_resistor_value(bands.split(","))
+        v, t = get_resistor_value(bands.split(","))
         if v is not None and t is not None:
             print("%.2f +- %.2f%%" % (v, t))
 

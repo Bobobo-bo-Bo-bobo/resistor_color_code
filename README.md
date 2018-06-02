@@ -10,6 +10,13 @@
 	padding: 5px;
 	background-color: #eeeeee;
     }
+    pre {
+	background-color:#DDDDDD;
+	border-color:#BBBBBB;
+	border-width:2px;
+	border-style:solid;
+	padding:4px;
+    }
 </style>
 
 Decode resistor color bands
@@ -153,6 +160,18 @@ Required packages:
 Supported command line parameters are:
 
   * `-h` or `--help` - shows a brief help
+
+The color names (see table above) should be given as parameter, separated by comma, output is the resistor value and the tolerance.
+
+Multiple resistor bands can be given (separated by white space), e.g.:
+
+<pre>
+resistor_color_code yellow,violet,orange,gold brown,black,orange orange,orange,black,brown,violet
+47000.00 +- 5.00%
+10000.00 +- 20.00%
+3300.00 +- 0.10%
+</pre>
+
 
 ---
 

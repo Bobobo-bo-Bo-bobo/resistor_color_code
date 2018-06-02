@@ -9,7 +9,7 @@ long_options = [
     "--help",
 ]
 
-__version = "0.1.0"
+__version = "0.1.1"
 
 # color mappings
 digit = {

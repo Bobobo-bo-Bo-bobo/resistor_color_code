@@ -88,10 +88,12 @@ Public License Version 3. (http://www.gnu.org/copyleft/gpl.html)
 
 Usage: resistor_color_code [-h|--help] <comma_separated_list_of_color_bands> [<comma_separated_list_of_color_bands> ...]
 
+Valid color names are: %s
+
     -h      This text
     --help
 
-""" % (__version, ))
+""" % (__version, ", ".join(list(digit.keys()))))
 
 
 def is_valid_color_digit(color):

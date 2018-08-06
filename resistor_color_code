@@ -6,10 +6,10 @@ import sys
 
 short_options = "h"
 long_options = [
-    "--help",
+    "help",
 ]
 
-__version = "0.1.1"
+__version = "0.1.2"
 
 # color mappings
 digit = {
